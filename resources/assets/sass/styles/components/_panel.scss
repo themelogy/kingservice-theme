@@ -1,0 +1,50 @@
+
+.panel-default > .panel-heading {
+  background: #fff;
+  padding: 0;
+}
+
+.panel-group .panel {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.panel-title {
+  font-weight: 300;
+  > a {
+    display: block;
+    position: relative;
+    padding: 10px 15px;
+    font-weight: 500;
+    color: map-get($theme-colors, grey5);
+    background: $topbar-bg-color;
+    @include drop-shadow(0,0,5px,rgba(0,0,0,.5));
+    &:before {
+      font-family: 'FontAwesome';
+      content: '\f107';
+      position: absolute;
+      font-size: 16px;
+      top: 10px;
+      right: 15px;
+    }
+  }
+}
+
+.panel-body {
+  .google-map {
+    border: 2px solid $border-color;
+    @include border-radius(5px);
+  }
+  address {
+    p {
+      margin-bottom: 5px;
+      font-size: 1.1em;
+    }
+    abbr {
+      padding-right: 10px;
+      display: inline-block;
+      border-bottom: none;
+      font-weight: 700;
+    }
+  }
+}
